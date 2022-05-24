@@ -52,3 +52,15 @@ function displayBooks() {
   });
 }
 
+// Function to ddelete the book and Update the localStorage
+function remove(element) {
+  const bookId = element.target.id;
+  const bookToDelete = collectBooks[bookId - 1];
+  const freshCollection = collectBooks.filter((book) => book !== bookToDelete);
+  collectBooks = freshCollection;
+  localStorage.setItem("books", JSON.stringify(freshCollection));
+  element.target.parentElement.remove();
+}
+window.addEventListener("DOMContentLoaded", () => {
+  displayBooks();
+});

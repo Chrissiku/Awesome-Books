@@ -22,3 +22,33 @@ addBookBtn.addEventListener("click", () => {
   localStorage.setItem("books", JSON.stringify(collectBooks));
   displayBooks();
 });
+
+// Function to display all books
+function displayBooks() {
+  bookList.innerHTML = "";
+  collectBooks.forEach((element, index) => {
+    // Define all neccessary items
+    const parentContainer = document.createElement("div");
+    const titleContainer = document.createElement("p");
+    const authorContainer = document.createElement("p");
+    const removeButton = document.createElement("button");
+    const hLine = document.createElement("hr");
+    removeButton.innerText = "Remove";
+    // Remove book button on Click
+    removeButton.addEventListener("click", (e) => {
+      remove(e);
+    });
+
+    removeButton.setAttribute("id", index + 1);
+    titleContainer.innerText = element.title;
+    authorContainer.innerText = element.author;
+
+    parentContainer.appendChild(titleContainer);
+    parentContainer.appendChild(authorContainer);
+    parentContainer.appendChild(removeButton);
+    parentContainer.appendChild(hLine);
+
+    bookList.append(parentContainer);
+  });
+}
+

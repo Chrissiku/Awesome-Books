@@ -3,10 +3,29 @@ const bookTitle = document.querySelector('#book-title');
 const bookAuthor = document.querySelector('#book-author');
 const addBookBtn = document.querySelector('#add');
 const bookList = document.querySelector('#bookList');
+const menu = document.querySelectorAll('.menu-item ');
+const contents = document.querySelectorAll('.page_content');
 
 // Initialise the collection of books
 
 let collectBooks = JSON.parse(localStorage.getItem('books')) || [];
+
+// Display tabulation
+menu.forEach((menuItem, index) => {
+  menuItem.addEventListener('click', () => {
+    contents.forEach((content) => {
+      content.classList.remove('active');
+    });
+    menu.forEach((menuItem) => {
+      menuItem.classList.remove('active');
+    });
+    contents[index].classList.add('active');
+    menu[index].classList.add('active');
+  });
+});
+
+// Display the current date
+document.getElementById('date').innerHTML = Date();
 
 // Create a class to store books
 class BookClass {

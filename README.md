@@ -11,9 +11,11 @@
 
 <!-- ![screen](https://user-images.githubusercontent.com/101924220/169167327-1be8919e-2bda-4006-8efe-1d12850dc485.PNG) -->
 
-<!-- | On Desktop                                                                                                                                                                 | On Mobile                                                                                                                                                                 |
+| On Desktop                                                                                                                                                                 | On Mobile                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="800" alt="Desktop version of the project" src="https://user-images.githubusercontent.com/101924220/169167327-1be8919e-2bda-4006-8efe-1d12850dc485.PNG"> | <img width="320" alt="Screenshot 2022-05-15 at 23 27 28" src="https://user-images.githubusercontent.com/101924220/169225155-2b7f8b7c-0ab1-442a-8ecb-10b894e79ea5.PNG"> | -->
+| <img width="800" alt="Desktop version of the project" src="https://user-images.githubusercontent.com/101924220/170353587-77c878f4-b694-43a7-b49a-2c2e213858f8.PNG"> | <img width="320" alt="Mobile Version" src="https://user-images.githubusercontent.com/101924220/170353903-a18aadfe-6548-45d4-b74f-a0fd86ae4240.PNG"> |
+
+
 
 ## Built With
 

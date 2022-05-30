@@ -57,6 +57,7 @@ header nav ul.menu {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  cursor: pointer;
 }
 
 header nav ul.menu li {
@@ -73,6 +74,15 @@ header nav ul.menu li a {
 
 header nav ul.menu li.active {
   background: rgba(133, 127, 167, 0.5);
+}
+
+main .page_content .contact ul li {
+  color: #000;
+  font-weight: 500;
+}
+
+header nav ul.menu li:hover {
+  background: rgba(155, 141, 236, 0.5);
 }
 
 main .page_content .contact ul li a {
@@ -186,11 +196,6 @@ main .page_content .contact ul {
 main .page_content .contact .user {
   margin-top: 10px;
   font-weight: 600;
-}
-
-main .page_content .contact ul li {
-  color: #000;
-  font-weight: 500;
 }
 
 footer {

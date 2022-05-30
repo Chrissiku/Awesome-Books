@@ -1,12 +1,12 @@
 // Declaration of my items in he DOM
-const bookTitle = document.querySelector("#book-title");
-const bookAuthor = document.querySelector("#book-author");
-const addBookBtn = document.querySelector("#add");
-const bookList = document.querySelector("#bookList");
+const bookTitle = document.querySelector('#book-title');
+const bookAuthor = document.querySelector('#book-author');
+const addBookBtn = document.querySelector('#add');
+const bookList = document.querySelector('#bookList');
 
-// Initialise the collection of books
+// // Initialise the collection of books
 
-let collectBooks = JSON.parse(localStorage.getItem("books")) || [];
+let collectBooks = JSON.parse(localStorage.getItem('books')) || [];
 
 // Display the current date
 
@@ -33,37 +33,37 @@ class BookClass {
     this.bookId = element.target.id;
     this.bookToDelete = collectBooks[this.bookId - 1];
     this.freshCollection = collectBooks.filter(
-      (book) => book !== this.bookToDelete
+      (book) => book !== this.bookToDelete,
     );
     collectBooks = this.freshCollection;
-    localStorage.setItem("books", JSON.stringify(this.freshCollection));
+    localStorage.setItem('books', JSON.stringify(this.freshCollection));
     element.target.parentElement.remove();
   }
 
   // Add the method to display  the whole localStorage
 
   displayBooks() {
-    bookList.innerHTML = "";
+    bookList.innerHTML = '';
     collectBooks.forEach((element, index) => {
       // Define all neccessary items
 
-      const parentContainer = document.createElement("div");
-      parentContainer.classList.add("book-card");
-      const titleContainer = document.createElement("span");
-      const authorContainer = document.createElement("span");
-      const removeButton = document.createElement("button");
-      removeButton.classList.add("btn");
-      const bookInfos = document.createElement("p");
-      bookInfos.classList.add("book-infos");
-      removeButton.innerText = "Remove";
+      const parentContainer = document.createElement('div');
+      parentContainer.classList.add('book-card');
+      const titleContainer = document.createElement('span');
+      const authorContainer = document.createElement('span');
+      const removeButton = document.createElement('button');
+      removeButton.classList.add('btn');
+      const bookInfos = document.createElement('p');
+      bookInfos.classList.add('book-infos');
+      removeButton.innerText = 'Remove';
 
       // Remove book button on Click
 
-      removeButton.addEventListener("click", (e) => {
+      removeButton.addEventListener('click', (e) => {
         this.remove(e);
       });
 
-      removeButton.setAttribute("id", index + 1);
+      removeButton.setAttribute('id', index + 1);
       titleContainer.innerText = `'' ${element.title} '' by `;
       authorContainer.innerText = element.author;
       bookInfos.appendChild(titleContainer);
@@ -76,5 +76,6 @@ class BookClass {
   }
 }
 
-export { BookClass, bookTitle, bookAuthor, addBookBtn, bookList, collectBooks };
-// export ;
+export {
+  BookClass, bookTitle, bookAuthor, addBookBtn, bookList,
+};

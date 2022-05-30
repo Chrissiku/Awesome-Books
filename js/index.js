@@ -1,28 +1,30 @@
-import myMenu from "../modules/menu.js";
+import myMenu from '../modules/menu.js';
 import {
   BookClass,
   bookTitle,
   bookAuthor,
   addBookBtn,
-  bookList,
-  collectBooks,
-} from "../modules/bookClass.js";
+  // collectBooks,
+} from '../modules/bookClass.js';
+
+const collectBooks = JSON.parse(localStorage.getItem('books')) || [];
+
 const myBookList = new BookClass();
 
 // Button to add new book to the collection
 
-addBookBtn.addEventListener("click", () => {
+addBookBtn.addEventListener('click', () => {
   myBookList.addBook();
-  bookTitle.value = "";
-  bookAuthor.value = "";
-  localStorage.setItem("books", JSON.stringify(collectBooks));
+  bookTitle.value = '';
+  bookAuthor.value = '';
+  localStorage.setItem('books', JSON.stringify(collectBooks));
   myBookList.displayBooks();
 });
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   myBookList.displayBooks();
 });
 
 myMenu();
 
-document.getElementById("date").innerHTML = Date();
+document.getElementById('date').innerHTML = Date();

@@ -6,8 +6,9 @@ import {
   addBookBtn,
   // collectBooks,
 } from '../modules/bookClass.js';
+// import myDateTime from '../modules/mydate.js';
 
-const collectBooks = JSON.parse(localStorage.getItem('books')) || [];
+const collectionBooks = JSON.parse(localStorage.getItem('books')) || [];
 
 const myBookList = new BookClass();
 
@@ -17,7 +18,7 @@ addBookBtn.addEventListener('click', () => {
   myBookList.addBook();
   bookTitle.value = '';
   bookAuthor.value = '';
-  localStorage.setItem('books', JSON.stringify(collectBooks));
+  localStorage.setItem('books', JSON.stringify(collectionBooks));
   myBookList.displayBooks();
 });
 
@@ -27,4 +28,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
 myMenu();
 
-document.getElementById('date').innerHTML = Date();
+// document.getElementById('date').innerHTML = myDateTime;
